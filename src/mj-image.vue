@@ -36,7 +36,7 @@ export default {
     }
   },
   computed: {
-    getCoumputedWidth: function(){
+    getComputedWidth: function(){
         // return width TODO
     }
   }
