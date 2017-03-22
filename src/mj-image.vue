@@ -2,7 +2,7 @@
   <table :align="align || 'center'" :border="border || 0" cellpadding="0" cellspacing="0" role="presentation" :style="[styles.table, customStyles]">
     <tbody>
       <tr>
-        <td :style="[styles.td, customStyles]">
+        <td :style="[{width: width || ''}, customStyles]">
           <a v-if="href" :href="href || ''" :target="target || '_blank'">
             <img :alt="alt || ''" :src="src || ''" :height="height || 'auto'" :style="[styles.img, customStyles]" :title="title || ''" :width="width || ''">
           </a>
@@ -22,9 +22,6 @@ export default {
         table: {
           borderCollapse: 'collapse',
           borderSpacing: '0px'
-        },
-        td: {
-          width: this.width + 'px' || ''
         },
         img: {
           border: 'none',
