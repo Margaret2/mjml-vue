@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  props: ['align', 'backgroundColor', 'custom-styles', 'href', 'verticalAlign'],
+  props: ['align', 'background-color', 'custom-styles', 'href', 'verticalAlign'],
   data: function(){
     return {
       styles: {
