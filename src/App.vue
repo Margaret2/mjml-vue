@@ -7,6 +7,7 @@
       <mj-button href="google.com">Click me</mj-button>
       <!--temporary table so the divider will work-->
       <table style="width: 100%;"><tbody>
+      <mj-spacer height="45px"></mj-spacer>
       <mj-divider full-width="600px" content-width="40%"></mj-divider>
     </tbody></table>
       <mj-image src="#" width="100px"></mj-image>
@@ -19,10 +20,11 @@ import mjButton from './mj-button.vue'
 import mjDivider from './mj-divider.vue'
 import mjImage from './mj-image.vue'
 import mjSection from './mj-section.vue'
+import mjSpacer from './mj-spacer.vue'
 import mjText from './mj-text.vue'
 export default {
   props: ['background-color', 'width'],
-  components: {mjButton, mjDivider, mjImage, mjSection, mjText },
+  components: {mjButton, mjDivider, mjImage, mjSection, mjSpacer, mjText },
   data: function(){
     return {
       styles: {
