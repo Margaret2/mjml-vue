@@ -1,13 +1,13 @@
-<!--TODO: get width --> 
+<!--TODO: get width -->
 <template lang="html">
   <!--[if mso | IE]>
-  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" :width="parseFloat(width) || 600" align="center" :style="{width: width || '600px'}">
     <tr>
       <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
   <![endif]-->
 <div v-if="backgroundUrl" :style="divStyle">
   <!--[if mso | IE]>
-    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="GETWIDTH">
+    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" :style="{width: width || '600px'}">
         <v:fill origin="0.5, 0" position="0.5,0" type="tile" :src="backgroundUrl" />
         <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
     <![endif]-->
@@ -43,14 +43,13 @@
 
 <script>
 export default {
-  props:['background-url', 'full-width'],
+  props:['background-url', 'full-width', 'width'],
   data: function(){
     return {
       divStyle: {
         margin: '0px auto',
-        maxWidth: this.fullWidth ? '' : '600px',
-        background:  `url(${this.backgroundUrl}) top center / auto repeat`,
-        width: this.fullWidth ? '100%' : ''
+        maxWidth: this.fullWidth ? '' : this.width ? this.width : '600px',
+        background:  `url(${this.backgroundUrl}) top center / auto repeat`
       },
       tableStyle: {
         fontSize: '0px',

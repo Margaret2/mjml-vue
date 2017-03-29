@@ -1,13 +1,13 @@
 <!-- testing all the components -->
 <template>
     <div :style="styles">
-      <mj-section full-width="true" background-url="https://images.unsplash.com/photo-1487564149407-9fb3522e2ceb?dpr=1&auto=compress,format&fit=crop&w=600&h=200&q=80&cs=tinysrgb&crop=">
+      <mj-section background-url="https://images.unsplash.com/photo-1487564149407-9fb3522e2ceb?dpr=1&auto=compress,format&fit=crop&w=600&h=200&q=80&cs=tinysrgb&crop=" width="850px">
         <h1 style="font-size: 20px;">sljs sl lkjs </h1>
       </mj-section>
       <mj-button href="google.com">Click me</mj-button>
       <!--temporary table so the divider will work-->
-      <table><tbody>
-      <mj-divider></mj-divider>
+      <table style="width: 100%;"><tbody>
+      <mj-divider full-width="600px" content-width="40%"></mj-divider>
     </tbody></table>
       <mj-image src="#" width="100px"></mj-image>
       <mj-text height="250px"></mj-text>
