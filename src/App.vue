@@ -9,8 +9,8 @@
       <table style="width: 100%;"><tbody>
       <mj-spacer height="45px"></mj-spacer>
       <mj-divider full-width="600px" content-width="40%"></mj-divider>
+      <mj-image  src="http://bit.ly/2mTqvM3" full-width="600px" content-width="300px"></mj-image>
     </tbody></table>
-      <mj-image src="#" width="100px"></mj-image>
       <mj-text height="250px"></mj-text>
     </div>
 </template>
